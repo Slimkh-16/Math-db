@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Шар_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="251px" height="118.041px" viewBox="0 0 251 118.041" enable-background="new 0 0 251 118.041" xml:space="preserve">
+<g>
+	<g>
+		<rect x="92.615" y="69.308" fill="#C82236" width="14.386" height="25.719"/>
+		<rect x="110.496" y="69.308" fill="#C82236" width="14.385" height="48.732"/>
+		<rect x="128.374" fill="#2A97EA" width="14.435" height="69.308"/>
+		<rect x="146.257" y="31.521" fill="#2A97EA" width="14.431" height="37.787"/>
+	</g>
+	<path fill="#C82236" d="M70.706,74.83H54.479v24.021h-6.054V74.83H0v-4.312L46.686,4.188h7.793v65.104h16.228V74.83z
+		 M48.425,69.292V42.375c0-12.964,0.3-23.848,0.902-32.648h-0.515c-0.86,1.589-3.5,5.625-7.922,12.107L7.662,69.292H48.425z"/>
+	<path fill="#C82236" d="M251,74.83h-16.229v24.021h-6.054V74.83h-48.425v-4.312L226.98,4.188h7.791v65.104H251V74.83z
+		 M228.719,69.292V42.375c0-12.964,0.301-23.848,0.902-32.648h-0.516c-0.859,1.589-3.5,5.625-7.922,12.107l-33.229,47.458H228.719
+		L228.719,69.292z"/>
+</g>
+</svg>

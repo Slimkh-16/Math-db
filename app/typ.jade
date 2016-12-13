@@ -1,0 +1,97 @@
+doctype html
+html
+  head
+    include _head
+
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body.noscroll
+    noscript
+      style.
+        .preloader {display:none !important;}
+      div
+        strong For full functionality of this site it is necessary to enable JavaScript. Download the update here 
+        a(href="http://enable-javascript.com")
+          | enable-javascript.com
+      
+    //if lte IE 8
+      p.off-js
+        | Ваш браузер устарел, пожалуйста 
+        b обновите
+        |  его.
+    // PRELOADER
+    include _preloader
+    // PRELOADER
+    // mobile menu
+    include _mobile-menu
+    // mobile menu
+    // wrapper start
+    .wrapper
+      // header SECTION
+      include _header
+      // header SECTION
+      // page item
+      section.content
+        .container
+          .heading-section.align-left
+            | Typography
+          h1 H1 Header
+          p Integrated Technologies Laboratory (Intela) University provides students the completely free opportunity to use cutting-edge platforms for all computing needs. Students can use the revolutionary MathDB data platform for Machine Learning to tackle real world problems – free of charge. We believe practical knowledge in MathDB combined with Data Visualization tools from market-leader Tableau, prepares students for a wide range of analytical roles within data-intensive fields such as predictive analytics, risk management, financial modeling, or information technology. Our goal is to provide our Machine Learning and Data Science expertise to students from across the globe to help nurture top talent and create opportunities for collaboration.
+          h2 H2 Header
+          p Integrated Technologies Laboratory (Intela) University provides students the completely free opportunity to use cutting-edge platforms for all computing needs. Students can use the revolutionary MathDB data platform for Machine Learning to tackle real world problems – free of charge. We believe practical knowledge in MathDB combined with Data Visualization tools from market-leader Tableau, prepares students for a wide range of analytical roles within data-intensive fields such as predictive analytics, risk management, financial modeling, or information technology. Our goal is to provide our Machine Learning and Data Science expertise to students from across the globe to help nurture top talent and create opportunities for collaboration.
+          h3 H3 Header
+          p Integrated Technologies Laboratory (Intela) University provides students the completely free opportunity to use cutting-edge platforms for all computing needs. Students can use the revolutionary MathDB data platform for Machine Learning to tackle real world problems – free of charge. We believe practical knowledge in MathDB combined with Data Visualization tools from market-leader Tableau, prepares students for a wide range of analytical roles within data-intensive fields such as predictive analytics, risk management, financial modeling, or information technology. Our goal is to provide our Machine Learning and Data Science expertise to students from across the globe to help nurture top talent and create opportunities for collaboration.
+          h4 H4 Header
+          p Integrated Technologies Laboratory (Intela) University provides students the completely free opportunity to use cutting-edge platforms for all computing needs. Students can use the revolutionary MathDB data platform for Machine Learning to tackle real world problems – free of charge. We believe practical knowledge in MathDB combined with Data Visualization tools from market-leader Tableau, prepares students for a wide range of analytical roles within data-intensive fields such as predictive analytics, risk management, financial modeling, or information technology. Our goal is to provide our Machine Learning and Data Science expertise to students from across the globe to help nurture top talent and create opportunities for collaboration.
+          h5 H5 Header
+          p Integrated Technologies Laboratory (Intela) University provides students the completely free opportunity to use cutting-edge platforms for all computing needs. Students can use the revolutionary MathDB data platform for Machine Learning to tackle real world problems – free of charge. We believe practical knowledge in MathDB combined with Data Visualization tools from market-leader Tableau, prepares students for a wide range of analytical roles within data-intensive fields such as predictive analytics, risk management, financial modeling, or information technology. Our goal is to provide our Machine Learning and Data Science expertise to students from across the globe to help nurture top talent and create opportunities for collaboration.
+          .row
+            .col.l6.m6.s12
+              ul.list-box
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+            .col.l6.m6.s12
+              ol.list-number-box
+                li
+                  span Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                li
+                  span Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                li
+                  span Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                li
+                  span Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                li
+                  span Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+          p
+            input#test1(name='group1', type='radio')
+            label(for='test1') Red
+          p
+            input#test2(name='group1', type='radio')
+            label(for='test2') Yellow
+          p
+            input#test3.with-gap(name='group1', type='radio')
+            label(for='test3') Green
+          p
+            input#test5(type='checkbox')
+            label(for='test5') Red
+          p
+            input#test6(type='checkbox', checked='checked')
+            label(for='test6') Yellow
+          p
+            input#filled-in-box.filled-in(type='checkbox', checked='checked')
+            label(for='filled-in-box') Filled in
+          p
+            input#indeterminate-checkbox(type='checkbox')
+            label(for='indeterminate-checkbox') Indeterminate Style
+          blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+
+      // page item
+      .puship-bottom-block
+      .above-footer
+    include _footer

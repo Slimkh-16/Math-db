@@ -1,0 +1,49 @@
+header.header.clearfix
+  .search-box
+    .container
+      form(action="#")
+        button(type="submit")
+          span.icon-ico01
+        input(type="text",placeholder="Search")
+        span.close-search-box.js_close_search
+  .header-top
+    .container
+      span.hamburger--collapse.js_open_mob_menu
+        span.hamburger-box
+          span.hamburger-inner
+      a.logo(href='main.html')
+        img.logo-img(src='images/logo.svg', alt='')
+      .search-butt.js_open_search
+        span.icon-ico01
+      a.btn.waves-effect.waves-light.inlog.modal-trigger(href="#registration")
+        | Log in
+
+  .header-bottom
+    .container
+      ul.head-nav
+        li.with-drop
+          a(href='main.html') Home  
+          .drop-menu
+            .drop-menu-arrow
+            .container
+              ul.section.table-of-contents
+                li
+                  a(href="#section1") Products
+                li
+                  a(href="#section2") Services  
+                li 
+                  a(href="#section3") Education 
+                li
+                  a(href="#section4") Hire
+                li
+                  a(href="#section5") Events
+        li
+          a(href='products.html') Products
+        li
+          a(href='service-one.html') Services
+        li
+          span Education
+        li
+          a(href='#') Hire 
+        li
+          a(href='#') Company

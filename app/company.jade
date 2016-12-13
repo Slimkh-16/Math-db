@@ -1,0 +1,112 @@
+doctype html
+html
+  head
+    include _head
+
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body.noscroll
+    noscript
+      style.
+        .preloader {display:none !important;}
+      div
+        strong For full functionality of this site it is necessary to enable JavaScript. Download the update here 
+        a(href="http://enable-javascript.com")
+          | enable-javascript.com
+      
+    //if lte IE 8
+      p.off-js
+        | Ваш браузер устарел, пожалуйста 
+        b обновите
+        |  его.
+    // PRELOADER
+    include _preloader
+    // PRELOADER
+    // mobile menu
+    include _mobile-menu
+    // mobile menu
+    // wrapper start
+    .wrapper
+      // header SECTION
+      include _header
+      // header SECTION
+      //banner section
+      .banner(style="background:url(assets/images/banner.jpg) 50% 50% no-repeat")
+        .banner-caption
+          | We make breakthrough products that change
+          br
+          | the way people use data.
+      //banner section
+      // page item
+      section.page-item
+        .container
+          .page-left-fixed-nav
+            ul.section.table-of-contents
+              li.collapse-nav.collapse-nav-active
+                span.collapse-nav-span
+                 span.icon-ico02 
+                 | Company 
+              li.collapse-nav
+                a(href='#!') Leadership Team
+              li.collapse-nav
+                a(href='#!') News & Events
+                span.collapse-butt.icon-ico22
+                ul.collapse-box
+                  li
+                    span.collapse-nav-active
+                      span.icon-ico02 
+                      | News
+                  li
+                    a(href="#!") Blog
+                  li
+                    a(href="#!") Publications
+              li.collapse-nav
+                 a(href='#!')  Careers 
+              li.collapse-nav
+                a(href='#!') Contact Us
+          .row
+            .col.l9.offset-l3.s12
+              .heading-section.align-left.heading-section--red Company
+              .box-info
+                .heading-contact Who we are?
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                p It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .about-company-box
+                .heading-contact
+                  | Want to redefine what data means to people?
+                  br
+                  span.yelow-text Join Data Science Portal.
+                img(src="assets/images/about1.jpg", alt="")
+                img(src="assets/images/about2.jpg", alt="")
+                img(src="assets/images/about3.jpg", alt="")
+                img(src="assets/images/about4.jpg", alt="")
+                .align-center
+                    a.waves-effect.waves-light.btn.btn--2(href='#') SEE ALL CAREERS
+      section.grey-section.puship-bottom-block
+        .container
+          .row
+            .col.l6.s12
+              .grey-nav
+                .icon-ico26.grey-nav__icon
+                .grey-nav__info
+                  | Get in touch with us
+                  br
+                  a(href="#!").link-more
+                    span.icon-ico02
+                    | Learn more
+            .col.l6.s12
+              .grey-nav
+                .icon-ico27.grey-nav__icon
+                .grey-nav__info
+                  | Stay current with our news
+                  br
+                  a(href="#!").link-more
+                    span.icon-ico02
+                    | Learn more
+      // page item
+      .above-footer
+    include _footer

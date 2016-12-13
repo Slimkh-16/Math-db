@@ -1,0 +1,140 @@
+doctype html
+html
+  head
+    include _head
+
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body.noscroll
+    noscript
+      style.
+        .preloader {display:none !important;}
+      div
+        strong For full functionality of this site it is necessary to enable JavaScript. Download the update here 
+        a(href="http://enable-javascript.com")
+          | enable-javascript.com
+      
+    //if lte IE 8
+      p.off-js
+        | Ваш браузер устарел, пожалуйста 
+        b обновите
+        |  его.
+    // PRELOADER
+    include _preloader
+    // PRELOADER
+    // mobile menu
+    include _mobile-menu
+    // mobile menu
+    // wrapper start
+    .wrapper
+      // header SECTION
+      include _header
+      // header SECTION
+      //banner section
+      .banner(style="background:url(assets/images/banner.jpg) 50% 50% no-repeat")
+        .banner-caption
+          | We make breakthrough products that change
+          br
+          | the way people use data.
+      //banner section
+      // page item
+      section.page-item
+        .container
+          .page-left-fixed-nav
+            ul.section.table-of-contents
+              li.collapse-nav
+                a(href='#!') Company
+              li.collapse-nav
+                a(href='#!') Leadership Team
+              li.collapse-nav
+                a(href='#!') News & Events
+                span.collapse-butt.icon-ico22
+                ul.collapse-box
+                  li
+                    span.collapse-nav-active
+                      span.icon-ico02 
+                      | News
+                  li
+                    a(href="#!") Blog
+                  li
+                    a(href="#!") Publications
+              li.collapse-nav.collapse-nav-active
+                span.collapse-nav-span
+                 span.icon-ico02 
+                 | Careers 
+              li.collapse-nav
+                a(href='#!') Contact Us
+          .row
+            .col.l9.offset-l3.s12
+              .heading-section.align-left.heading-section--red Careers
+              .box-info
+                .heading-contact Our offices
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                img(src="assets/images/img10.jpg", alt="")
+                img(src="assets/images/img11.jpg", alt="")
+              .box-info
+                .heading-contact.heading-contact--bt We love data
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .heading-contact.heading-contact--bt Available Positions
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
+              .accordion-box
+                ul.collapsible(data-collapsible='accordion')
+                  li
+                    .collapsible-header
+                      | Oracle DBA
+                    .collapsible-body
+                      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                  li
+                    .collapsible-header
+                      | Sybase DBA/Developer
+                    .collapsible-body
+                      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  li
+                    .collapsible-header
+                      | Sybase Sr. Developer
+                    .collapsible-body
+                      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  li
+                    .collapsible-header
+                      | MS SQL DBA
+                    .collapsible-body
+                      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              .contact-form
+                .heading-contact.align-left Interested in working with us? Submit your Resume here!
+                .row
+                  form(action="#").js_validate
+                    .col.l6.m12.s12.form-field.required-field
+                      span Name (first name, last name)*
+                      input(type="text",required)   
+                    .col.l6.m12.s12.form-field.required-field
+                      span Phone*
+                      input(type="tel",required,data-validate="phone")
+                    .col.l6.m12.s12.form-field.required-field
+                      span Email*
+                      input(type="email",required,data-validate="email")
+                    .col.l6.m12.s12.form-field.required-field
+                      span Subject*
+                      select(required)
+                        option(value="",disabled="",selected="") Select subject   
+         
+                        option(value="1") Select subject 1                
+                        option(value="1") Select subject 1                
+                        option(value="1") Select subject 1   
+                    .col.s12.form-field.required-field
+                      span Message*
+                      textarea(required).materialize-textarea
+                    .col.s12.form-field.file-add
+                      span Upload file:
+                      label
+                        | Upload from your computer
+                        span.icon-ico31
+                        input(type="file")
+                      span.file-name File is not selected
+                    button(type="submit").btn.waves-effect.waves-light submit       
+      // page item
+      .puship-bottom-block
+      .above-footer
+    include _footer

@@ -1,0 +1,189 @@
+doctype html
+html
+  head
+    include _head
+
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body.noscroll
+    noscript
+      style.
+        .preloader {display:none !important;}
+      div
+        strong For full functionality of this site it is necessary to enable JavaScript. Download the update here 
+        a(href="http://enable-javascript.com")
+          | enable-javascript.com
+      
+    //if lte IE 8
+      p.off-js
+        | Ваш браузер устарел, пожалуйста 
+        b обновите
+        |  его.
+    // PRELOADER
+    include _preloader
+    // PRELOADER
+    // mobile menu
+    include _mobile-menu
+    // mobile menu
+    // wrapper start
+    .wrapper.main-page
+      // header SECTION
+      include _header
+      // header SECTION
+      // video section
+      section.video-banner
+        video(preload='yes', autoplay='', loop='', poster='assets/images/bg-video.jpg', muted)
+          source(src='', type='video/webm')
+          source(src='http://pink-diablo.com.ua/assets/files/video_nasne.mp4', type='video/mp4')
+          source(src='http://pink-diablo.com.ua/assets/files/video_nasne.ogv', type='video/ogv')
+        .video-caption
+          | See and understand your data  with MathDB<br>
+          a(href="#").btn.waves-effect.waves-light See it in action
+      // video section
+      // info section
+      section.info-section
+        .container
+          .heading-section About us
+          .row
+            .col.l10.offset-l1.s12
+              | Integrated Technologies Laboratory (Intela) University provides students the completely free opportunity to use cutting-edge platforms for all computing needs. Students can use the revolutionary MathDB data platform for Machine Learning to tackle real world problems – free of charge. We believe practical knowledge in MathDB combined with Data Visualization tools from market-leader Tableau, prepares students for a wide range of analytical roles within data-intensive fields such as predictive analytics, risk management, financial modeling, or information technology. Our goal is to provide our Machine Learning and Data Science expertise to students from across the globe to help nurture top talent and create opportunities for collaboration.
+      // info section
+      // section products
+      section.products-section.scrollspy(id="section1")
+        .container
+          .heading-section Products
+          .row
+            .col.l8.offset-l2.s12
+              .row
+                .col.l6.s12
+                  .product-item
+                    .product-img
+                      span.icon-ico03
+                      span.icon-ico04
+                      img(src="images/ico14.svg", alt="")
+                      img(src="images/ico13.svg", alt="").img-hover
+                    .product-info
+                      .product-info__head Math DB Cloud
+                      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                      a.link-more(href="#")
+                        span.icon-ico02
+                        | Learn more
+                .col.l6.s12
+                  .product-item
+                    .product-img
+                      span.icon-ico05
+                      span.icon-ico06
+                      img(src="images/ico16.svg", alt="")
+                      img(src="images/ico15.svg", alt="").img-hover
+                    .product-info
+                      .product-info__head Math DB Desktop
+                      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                      a.link-more(href="#")
+                        span.icon-ico02
+                        | Learn more
+      // section products
+      // section services
+      section.services-section.scrollspy(id="section2")
+        mixin servise-item(img,head)
+          .col.l3.m6.s12
+            .service-item(style="background:url(assets/images/#{img}.jpg)")
+              span.service-info
+                span.service-info__head=head
+                span.service-txt 
+                  | Data Science asa Service 
+                a.link-more(href="#")
+                  span.icon-ico02
+                  | Learn more
+        .container
+          .heading-section Services
+          .row
+            +servise-item('img1','DSAAS')
+            +servise-item('img2','AIAAS')
+            +servise-item('img3','MLAAS')
+            +servise-item('img4','ICAAS')
+
+      // section services
+      // section Education
+      section.education-section.scrollspy(id="section3")
+        mixin education-item(img)
+          .col.l3.m6.s12
+            .education-item
+              span.education-img(style="background:url(assets/images/#{img}.jpg) 50% 50% no-repeat")
+              span.education-info
+                span.education-info__head 
+                  | MathDB Desktop: Python for Everybody Everybody
+                a.link-more(href="#")
+                  span.icon-ico02
+                  | Learn more
+        .container
+          .heading-section.heading-section--with-link Education
+            a.link-more(href="#")
+              span.icon-ico02
+              | all education
+          .row
+            +education-item('img5')
+            +education-item('img6')
+            +education-item('img7')
+            +education-item('img8')
+      // section Education
+      // section hire
+      section.hire-section.scrollspy(id="section4")
+        mixin hire-item(img,head)
+          .swiper-slide
+            .hire-item
+              .hire-img(style="background:url(assets/images/#{img}.jpg) 50% 50% no-repeat")
+                .hire-head=head
+              .hire-info
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. 
+                a.link-more(href="#")
+                  span.icon-ico02
+                  | Learn more
+        .container
+          .heading-section Hire
+          .subheading Integrated Technologies Laboratory (Intela) University provides students the completely free opportunity to use cutting-edge platforms for all computing needs. Students can use the revolutionary MathDB data platform for Machine Learning to tackle real world problems – free of charge. 
+          .swiper-container.hire-slider
+            .swiper-wrapper
+              +hire-item('pic1','Science Team')
+              +hire-item('pic2','Data scientists')
+              +hire-item('pic3','Software engineers')
+              +hire-item('pic2','Software engineers')
+              +hire-item('pic1','Software engineers')
+          .swiper-button-next
+          .swiper-button-prev
+      // section hire
+      // section Events
+      section.events-section.scrollspy(id="section5")
+        .container
+          .heading-section.heading-section--with-link Events
+            a.link-more(href="#!")
+              span.icon-ico02
+              | All events
+          .row
+            .col.l6.s12
+              a.event-item(href="#")
+                .event-item-img
+                  img(src="assets/images/ev1.jpg", alt="")
+                .event-item-info
+                  .event-item-head 
+                    | Tableau Conference Live
+                  p Streaming live from Austin, November 8-10      Streaming live from Austin, November 8-10     Streaming live from Austin, November 8-10
+                  span.link-more
+                    span.icon-ico02
+                    | Learn more
+            .col.l6.s12
+              a(href="#").event-item
+                .event-item-img
+                  img(src="assets/images/ev2.jpg", alt="")
+                .event-item-info
+                  .event-item-head 
+                    | Tableau 10 Roadshow
+                  p Streaming live from Austin, November 8-10
+                  span.link-more
+                    span.icon-ico02
+                    | Learn more
+      // section events
+      .above-footer
+    include _footer

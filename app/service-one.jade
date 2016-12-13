@@ -1,0 +1,247 @@
+doctype html
+html
+  head
+    include _head
+
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body.noscroll
+    noscript
+      style.
+        .preloader {display:none !important;}
+      div
+        strong For full functionality of this site it is necessary to enable JavaScript. Download the update here 
+        a(href="http://enable-javascript.com")
+          | enable-javascript.com
+      
+    //if lte IE 8
+      p.off-js
+        | Ваш браузер устарел, пожалуйста 
+        b обновите
+        |  его.
+    // PRELOADER
+    include _preloader
+    // PRELOADER
+    // mobile menu
+    include _mobile-menu
+    // mobile menu
+    // wrapper start
+    .wrapper.product-page
+      // header SECTION
+      include _header
+      // header SECTION
+      //banner section
+      .banner(style="background:url(assets/images/banner.jpg) 50% 50% no-repeat")
+        .banner-caption
+         | Answer questions at the speed of thought 
+         br
+         | with MathDB
+      //banner section
+      // page item
+      section.page-item.parent-scroll-element
+        .container
+          .page-left-fixed-nav
+            ul.section.table-of-contents
+              li.collapse-nav
+                a(href='#service1').serv-nav DSAAS
+                  span.small Data Science as a Service
+                span.collapse-butt.icon-ico22
+                ul.collapse-box
+                  li
+                    a(href="#!",data-scroll-to="service-features1",data-scroll="true") Features
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Docs
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Download
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Wiki
+              li.collapse-nav
+                a(href='#service2').serv-nav AIAAS
+                  span.small AI as a Service
+                span.collapse-butt.icon-ico22
+                ul.collapse-box
+                  li
+                    a(href="#!",data-scroll-to="service-features2",data-scroll="true") Features
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Docs
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Download
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Wiki
+              li.collapse-nav
+                a(href='#service3').serv-nav MLAAS
+                  span.small Machine Learning as a Service
+                span.collapse-butt.icon-ico22
+                ul.collapse-box
+                  li
+                    a(href="#!",data-scroll-to="service-features3",data-scroll="true") Features
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Docs
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Download
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Wiki
+              li.collapse-nav
+                a(href='#service4').serv-nav ICAAS
+                  span.small Intelligent Computing as a Service
+                span.collapse-butt.icon-ico22
+                ul.collapse-box
+                  li
+                    a(href="#!",data-scroll-to="service-features4",data-scroll="true") Features
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Docs
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Download
+                  li
+                    a(href="#!") 
+                      span.icon-ico07
+                      | Wiki
+              li.collapse-nav
+                a(href='#case').serv-nav Use cases
+          .row
+            .col.l9.offset-l3.s12
+              .heading-section.align-left Services
+              .product-article.scrollspy(id="service1")
+                .product-box
+                  .service-top
+                    .service-title DSAAS - Data Science as a Service
+                    p Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived no t only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  .service-bottom
+                    .service-bottom__head(id="service-features1") Features
+                    ul
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                    p MathDB Cloud Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived no t only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                .product-box__footer
+                  a(href="#!")
+                    span.icon-ico02
+                    | Docs  
+                  a(href="#!")
+                    span.icon-ico02
+                    | Download  
+                  a(href="#!")
+                    span.icon-ico02
+                    | wiki 
+              .product-article.scrollspy(id="service2")
+                .product-box
+                  .service-top
+                    .service-title AIAAS - AI as a Service
+                    p Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived no t only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  .service-bottom
+                    .service-bottom__head(id="service-features2") Features
+                    ul
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                    p MathDB Cloud Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived no t only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                .product-box__footer
+                  a(href="#!")
+                    span.icon-ico02
+                    | Docs  
+                  a(href="#!")
+                    span.icon-ico02
+                    | Download  
+                  a(href="#!")
+                    span.icon-ico02
+                    | wiki 
+              .product-article.scrollspy(id="service3")
+                .product-box
+                  .service-top
+                    .service-title MLAAS - Machine Learning as a Service
+                    p Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived no t only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  .service-bottom
+                    .service-bottom__head(id="service-features3") Features
+                    ul
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                    p MathDB Cloud Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived no t only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                .product-box__footer
+                  a(href="#!")
+                    span.icon-ico02
+                    | Docs  
+                  a(href="#!")
+                    span.icon-ico02
+                    | Download  
+                  a(href="#!")
+                    span.icon-ico02
+                    | wiki 
+              .product-article.scrollspy(id="service4")
+                .product-box
+                  .service-top
+                    .service-title ICAAS - Intelligent Computing as a Service
+                    p Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived no t only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  .service-bottom
+                    .service-bottom__head(id="service-features4") Features
+                    ul
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                      li Lorem ipsum dolor sit amet, consectetur adipiscing elit etharums ser quidem.
+                    p MathDB Cloud Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived no t only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                .product-box__footer
+                  a(href="#!")
+                    span.icon-ico02
+                    | Docs  
+                  a(href="#!")
+                    span.icon-ico02
+                    | Download  
+                  a(href="#!")
+                    span.icon-ico02
+                    | wiki 
+      // page item
+      // section cases
+      section.cases-section.hire-section.scrollspy.puship-bottom-block(id="case")
+        mixin hire-item(img,head,cla)
+          .swiper-slide
+            .case-item
+              .cases-img(style="background:url(assets/images/#{img}.jpg) 50% 50% no-repeat")
+                .cases-capt(class="#{cla}")=head
+              .cases-info
+                a(href="#").cases-heading MathDB Desktop: Reviews TechnologyAdvice
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. 
+                a.link-more(href="#")
+                  | read more
+        .container
+          .heading-section Use cases
+          .swiper-container.hire-slider
+            .swiper-wrapper
+              +hire-item('pic1','MathDB Desktop','case-capt--1')
+              +hire-item('pic2','MathDB Cloud','case-capt--2')
+              +hire-item('pic3','MathDB Desktop','case-capt--1')
+              +hire-item('pic2','MathDB Cloud','case-capt--2')
+              +hire-item('pic1','MathDB Cloud','case-capt--2')
+          .swiper-button-next
+          .swiper-button-prev
+      // section hire
+      .above-footer
+    include _footer

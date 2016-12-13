@@ -1,0 +1,133 @@
+footer.footer
+  .container
+    .row
+      .col.l2.m3.s12
+          img(src='images/logo.svg', alt='').foot-logo
+          ul.foot-social
+            li
+              a(href="#",target="_blank")
+                span.icon-ico09
+            li
+              a(href="#",target="_blank")
+                span.icon-ico10
+            li
+              a(href="#",target="_blank")
+                span.icon-ico11
+      .col.l4.m3.s12
+        .foot-head contacts
+        address
+          | Information Technology Laboratory Ltd. 26, Kosmicheskaya st., Kharkov, 61145
+        ul.foot-nav
+          li
+            a(href='tel:+380577630763')
+              span Phone: 
+              | +380-57-763-0-763
+          li
+            a(href='matlto:info@mathdb.ua')
+              span E-Mail:
+              |  info@mathdb.ua 
+      .col.l3.m3.s12.hidden-xs
+        .foot-head Ads
+        .foot-blog
+          a(href="#").foot-blog__item
+            .foot-blog-img
+              img(src="assets/images/ads1.jpg", alt="")
+            .foot-blog-info
+              .foot-blog-date 15.10.2016
+              | Enterprise Analytics 
+              br
+              | Powered by IT
+          a(href="#").foot-blog__item
+            .foot-blog-img
+              img(src="assets/images/ads2.jpg", alt="")
+            .foot-blog-info
+              .foot-blog-date 15.10.2016
+              | Enterprise Analytics
+              br 
+              | Powered by IT
+      .col.l3.m3.s12.right
+        .foot-head Related resources
+        ul.foot-nav.foot-nav--2
+          li
+            a(href="#")
+              span.logo-nav
+                img(src="assets/images/logo1.png", alt="") 
+              | -  Tableau site
+          li
+            a(href="#")
+              span.logo-nav(style="vertical-align:-4px;")
+                img(src="assets/images/logo2.png", alt="") 
+              | -  Data4people site
+          li
+            a(href="#")
+              span.logo-nav
+                img(src="assets/images/logo3.png", alt="") 
+              | -  Tableau site
+  .bottom-footer
+    .container
+      .row
+        .col.s6.align-left
+          | © 2016, Tulsun. All rights reserved.
+        .col.s6.align-right
+          | Site development and support - 
+          a(href='https://artjoker.net/', target='_blank') Artjoker
+#modal-thank.modal
+  .modal-content
+    a.modal-action.modal-close(href='#!')
+      span.icon-ico38
+    .container.align-center
+      .modal-head
+        span.lg Thank you! <br>
+        | Your letter has been sent
+      .modal-body
+        p Our managers will contact you within 15 minutes
+        a.waves-effect.waves-light.btn.modal-close(href="#!") close
+#registration.modal
+  .modal-content
+    a.modal-action.modal-close(href='#!')
+      span.icon-ico38
+    .container 
+      .modal-head
+        span.lg Registration            
+      .contact-form
+        .row
+          form(action="#").js_validate
+            .col.l6.m12.s12.form-field.required-field
+              span Email*
+              input(type="email",required,data-validate="email")
+            .col.l6.m12.s12.form-field.required-field
+              span Password*
+              input(type="password",required)
+            .col.l6.m12.s12.form-field.required-field
+              span First Name*
+              input(type="text",required)   
+            .col.l6.m12.s12.form-field.required-field
+              span Middle Name
+              input(type="text") 
+            .col.l6.m12.s12.form-field.required-field
+              span Last Name*
+              input(type="text",required) 
+            .col.l6.m12.s12.form-field.required-field
+              span Phone*
+              input(type="tel",required,data-validate="phone")
+            .col.l12.m12.s12.form-field.required-field
+              span Company
+              input(type="text") 
+            button(type="submit").btn.waves-effect.waves-light submit    
+#comand-window.modal
+  .modal-content
+    a.modal-action.modal-close(href='#!')
+      span.icon-ico38
+    .container
+      .modal-head
+        | Richard Branson <br>
+        span CEO Data Science Portal
+      .modal-body
+        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.people throughout Cambodia.
+        p  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        .align-center
+          a.waves-effect.waves-light.btn.modal-close(href="#!") close
+script(type='text/javascript', src='js/all-plugins.min.js')
+script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?sensor=false')
+script(type='text/javascript', src='js/main.min.js')

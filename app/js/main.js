@@ -79,12 +79,18 @@ if ((browserYou.browser == 'ie' &&  browserYou.versionShort < +'9') || ((browser
 window.onload = function() {
   // PRELOADER
   var body = document.querySelector('body');
-  body.classList.remove('noscroll')
   body.classList.add('loading')
   if (isMobile == true) {body.parentNode.classList.add('mobile'); }
   setTimeout(function(){body.classList.add('loaded')},1000)
   setTimeout(function(){document.querySelector('.preloader').style.display = 'none';},1500)
   // //PRELOADER
+  var swiper = new Swiper('.main-slider', {
+      loop:true,
+      autoplay: 2000,
+      speed: 1500,
+      parallax:true,
+      slidesPerView: 1
+  });
   var swiper = new Swiper('.hire-slider', {
       loop:false,
       nextButton: '.hire-section .swiper-button-next',
@@ -208,19 +214,29 @@ window.onload = function() {
   // file
   if(document.querySelector('input[type="file"]') != undefined) {
     document.querySelector('input[type="file"]').addEventListener('change',function(){
-      var file = this.value;
-      console.log(this.parentNode.nextElementSibling , file)
+      // var files = document.getElementById('file');
+      //         for (var i = 0; i < files.files.length; i++) {
+      //             $('.name-file').text(files.files[i].name);
+      //         }
+      var file = this.files[0].name;
+      console.log(this.files[0].name)
       this.parentNode.nextElementSibling.innerText = file;
     });
   };
   // if(document.querySelector('.drop-menu-arrow') != undefined) {
   //   positionArrow()
   // }
+  if(document.querySelector('.js_height') != undefined) {
+    heightBlock('.js_height')
+  }
 }
 window.onresize = function() {
   // if(document.querySelector('.drop-menu-arrow') != undefined) {
   //   positionArrow()
   // }
+  if(document.querySelector('.js_height') != undefined) {
+    heightBlock('.js_height')
+  }
 }
 window.onscroll = function() {
   scrollTopPosition = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
@@ -324,7 +340,7 @@ $(document).ready(function() {
       setTimeout(function(){
         $(drop).find('.drop-menu').addClass('visible');
         $(drop).addClass('act')
-      },400);
+      },300);
     },
     function(){
       $('.header-bottom').find('.drop-menu').hide();
@@ -334,7 +350,7 @@ $(document).ready(function() {
   );
   // menu drop
   // collapse
-  $(document).on('click','.collapse-nav .collapse-butt',function(){
+  $(document).on('click','.collapse-nav .js_collapse_nav',function(){
     if($(this).hasClass('active')) {
       $(this).removeClass('active');
       $(this).parent().removeClass('active');

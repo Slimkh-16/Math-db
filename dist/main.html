@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <title>Math BD</title>
-    <link rel="shortcut icon" href="images/ico-16.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/all-pluging.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
@@ -44,8 +43,20 @@
             <li><a href="#section5" class="scroll-to">Events</a></li>
           </ul>
         </li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Services</a></li>
+        <li class="with-menu"><a href="#">Products<span class="open-drop-menu"></span></a>
+          <ul class="mobile-menu-drop section table-of-contents">
+            <li><a href="#">MathDB Cloud</a></li>
+            <li><a href="#">MathDB Desktop   </a></li>
+          </ul>
+        </li>
+        <li class="with-menu"><a href="#">Services<span class="open-drop-menu"></span></a>
+          <ul class="mobile-menu-drop section table-of-contents">
+            <li><a href="#">DSAAS - Data Science as a Service</a></li>
+            <li><a href="#">AIAAS - AI as a Service </a></li>
+            <li><a href="#">MLAAS - Machine Learning as a Service </a></li>
+            <li><a href="#">ICAAS - Intelligent Computing as a Service </a></li>
+          </ul>
+        </li>
         <li><a href="#">Education</a></li>
         <li><a href="#">Hire </a></li>
         <li><a href="#">Company</a></li>
@@ -66,7 +77,7 @@
         </div>
         <div class="header-top">
           <div class="container"><span class="hamburger--collapse js_open_mob_menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></span><a href="main.html" class="logo"><img src="images/logo.svg" alt="" class="logo-img"></a>
-            <div class="search-butt js_open_search"><span class="icon-ico01"></span></div><a href="#registration" class="btn waves-effect waves-light inlog modal-trigger">Log in</a>
+            <div class="search-butt js_open_search"><span class="icon-ico01"></span></div><a href="#registration" class="btn waves-effect waves-light inlog modal-trigger">Sign up</a><a href="#login" class="btn waves-effect waves-light inlog modal-trigger">Sign in</a>
           </div>
         </div>
         <div class="header-bottom">
@@ -86,11 +97,33 @@
                   </div>
                 </div>
               </li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="service-one.html">Services</a></li>
+              <li class="with-drop"><a href="products.html">Products</a>
+                <div class="drop-menu drop-menu--2">
+                  <div class="drop-menu-arrow"></div>
+                  <div class="container">
+                    <ul class="section table-of-contents">
+                      <li><a href="#">MathDB Cloud</a></li>
+                      <li><a href="#">MathDB Desktop  </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="with-drop"><a href="service-one.html">Services</a>
+                <div class="drop-menu drop-menu--3">
+                  <div class="drop-menu-arrow"></div>
+                  <div class="container">
+                    <ul class="section table-of-contents">
+                      <li><a href="#">DSAAS - Data Science as a Service</a></li>
+                      <li><a href="#">AIAAS - AI as a Service </a></li>
+                      <li><a href="#">MLAAS - Machine Learning as a Service </a></li>
+                      <li><a href="#">ICAAS - Intelligent Computing as a Service </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
               <li><span>Education</span></li>
               <li><a href="#">Hire </a></li>
-              <li><a href="#">Company</a></li>
+              <li><a href="company.html">Company</a></li>
             </ul>
           </div>
         </div>
@@ -98,11 +131,18 @@
       <!-- header SECTION-->
       <!-- video section-->
       <section class="video-banner">
-        <video preload="yes" autoplay="" loop="" poster="assets/images/bg-video.jpg" muted>
-          <source src="" type="video/webm">
-          <source src="http://pink-diablo.com.ua/assets/files/video_nasne.mp4" type="video/mp4">
-          <source src="http://pink-diablo.com.ua/assets/files/video_nasne.ogv" type="video/ogv">
-        </video>
+        <!--video(preload='yes', autoplay='', loop='', poster='assets/images/bg-video.jpg', muted)
+        source(src='', type='video/webm')
+        source(src='http://pink-diablo.com.ua/assets/files/video_nasne.mp4', type='video/mp4')
+        source(src='http://pink-diablo.com.ua/assets/files/video_nasne.ogv', type='video/ogv')
+        -->
+        <div class="swiper-container main-slider">
+          <div class="swiper-wrapper">
+            <div style="background: url(assets/images/banner.jpg) no-repeat" class="swiper-slide"></div>
+            <div style="background: url(assets/images/banner.jpg) no-repeat" class="swiper-slide"></div>
+            <div style="background: url(assets/images/banner.jpg) no-repeat" class="swiper-slide"></div>
+          </div>
+        </div>
         <div class="video-caption">See and understand your data  with MathDB<br><a href="#" class="btn waves-effect waves-light">See it in action</a></div>
       </section>
       <!-- video section-->
@@ -210,62 +250,64 @@
         <div class="container">
           <div class="heading-section">Hire</div>
           <div class="subheading">Integrated Technologies Laboratory (Intela) University provides students the completely free opportunity to use cutting-edge platforms for all computing needs. Students can use the revolutionary MathDB data platform for Machine Learning to tackle real world problems – free of charge. </div>
-          <div class="swiper-container hire-slider">
-            <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="hire-item">
-                          <div style="background:url(assets/images/pic1.jpg) 50% 50% no-repeat" class="hire-img">
-                            <div class="hire-head">Science Team</div>
-                          </div>
-                          <div class="hire-info">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="hire-item">
-                          <div style="background:url(assets/images/pic2.jpg) 50% 50% no-repeat" class="hire-img">
-                            <div class="hire-head">Data scientists</div>
-                          </div>
-                          <div class="hire-info">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
+          <div class="relative-container">
+            <div class="swiper-container hire-slider">
+              <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="hire-item">
+                            <div style="background:url(assets/images/pic1.jpg) 50% 50% no-repeat" class="hire-img">
+                              <div class="hire-head">Science Team</div>
+                            </div>
+                            <div class="hire-info">
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="hire-item">
-                          <div style="background:url(assets/images/pic3.jpg) 50% 50% no-repeat" class="hire-img">
-                            <div class="hire-head">Software engineers</div>
-                          </div>
-                          <div class="hire-info">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="hire-item">
-                          <div style="background:url(assets/images/pic2.jpg) 50% 50% no-repeat" class="hire-img">
-                            <div class="hire-head">Software engineers</div>
-                          </div>
-                          <div class="hire-info">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
+                        <div class="swiper-slide">
+                          <div class="hire-item">
+                            <div style="background:url(assets/images/pic2.jpg) 50% 50% no-repeat" class="hire-img">
+                              <div class="hire-head">Data scientists</div>
+                            </div>
+                            <div class="hire-info">
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="hire-item">
-                          <div style="background:url(assets/images/pic1.jpg) 50% 50% no-repeat" class="hire-img">
-                            <div class="hire-head">Software engineers</div>
-                          </div>
-                          <div class="hire-info">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
+                        <div class="swiper-slide">
+                          <div class="hire-item">
+                            <div style="background:url(assets/images/pic3.jpg) 50% 50% no-repeat" class="hire-img">
+                              <div class="hire-head">Software engineers</div>
+                            </div>
+                            <div class="hire-info">
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                        <div class="swiper-slide">
+                          <div class="hire-item">
+                            <div style="background:url(assets/images/pic2.jpg) 50% 50% no-repeat" class="hire-img">
+                              <div class="hire-head">Software engineers</div>
+                            </div>
+                            <div class="hire-info">
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="hire-item">
+                            <div style="background:url(assets/images/pic1.jpg) 50% 50% no-repeat" class="hire-img">
+                              <div class="hire-head">Software engineers</div>
+                            </div>
+                            <div class="hire-info">
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text. </p><a href="#" class="link-more"><span class="icon-ico02"></span>Learn more</a>
+                            </div>
+                          </div>
+                        </div>
+              </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
         </div>
       </section>
       <!-- section hire-->
@@ -310,7 +352,7 @@
           </div>
           <div class="col l4 m3 s12">
             <div class="foot-head">contacts</div>
-            <address>Information Technology Laboratory Ltd. 26, Kosmicheskaya st., Kharkov, 61145</address>
+            <address>Information Technology Laboratory Ltd. 26,<br>Kosmicheskaya st., Kharkov, 61145</address>
             <ul class="foot-nav">
               <li><a href="tel:+380577630763"><span>Phone: </span>+380-57-763-0-763</a></li>
               <li><a href="matlto:info@mathdb.ua"><span>E-Mail:</span> info@mathdb.ua </a></li>
@@ -353,6 +395,26 @@
           <div class="modal-head"><span class="lg">Thank you! <br></span>Your letter has been sent</div>
           <div class="modal-body">
             <p>Our managers will contact you within 15 minutes</p><a href="#!" class="waves-effect waves-light btn modal-close">close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="login" class="modal">
+      <div class="modal-content"><a href="#!" class="modal-action modal-close"><span class="icon-ico38"></span></a>
+        <div class="container"> 
+          <div class="modal-head"><span class="lg">Log in            </span></div>
+          <div class="contact-form">
+            <div class="row">
+              <form action="#" class="js_validate">
+                <div class="col l6 m12 s12 form-field required-field"><span>Email*</span>
+                  <input type="email" required data-validate="email">
+                </div>
+                <div class="col l6 m12 s12 form-field required-field"><span>Password*</span>
+                  <input type="password" required>
+                </div>
+                <button type="submit" class="btn waves-effect waves-light">submit </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

@@ -16,7 +16,9 @@ footer.footer
       .col.l4.m3.s12
         .foot-head contacts
         address
-          | Information Technology Laboratory Ltd. 26, Kosmicheskaya st., Kharkov, 61145
+          | Information Technology Laboratory Ltd. 26,
+          br
+          | Kosmicheskaya st., Kharkov, 61145
         ul.foot-nav
           li
             a(href='tel:+380577630763')
@@ -82,6 +84,23 @@ footer.footer
       .modal-body
         p Our managers will contact you within 15 minutes
         a.waves-effect.waves-light.btn.modal-close(href="#!") close
+#login.modal
+  .modal-content
+    a.modal-action.modal-close(href='#!')
+      span.icon-ico38
+    .container 
+      .modal-head
+        span.lg Log in            
+      .contact-form
+        .row
+          form(action="#").js_validate
+            .col.l6.m12.s12.form-field.required-field
+              span Email*
+              input(type="email",required,data-validate="email")
+            .col.l6.m12.s12.form-field.required-field
+              span Password*
+              input(type="password",required)
+            button(type="submit").btn.waves-effect.waves-light submit 
 #registration.modal
   .modal-content
     a.modal-action.modal-close(href='#!')

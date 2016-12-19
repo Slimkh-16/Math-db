@@ -35,10 +35,15 @@ html
       // header SECTION
       // video section
       section.video-banner
-        video(preload='yes', autoplay='', loop='', poster='assets/images/bg-video.jpg', muted)
+        //video(preload='yes', autoplay='', loop='', poster='assets/images/bg-video.jpg', muted)
           source(src='', type='video/webm')
           source(src='http://pink-diablo.com.ua/assets/files/video_nasne.mp4', type='video/mp4')
           source(src='http://pink-diablo.com.ua/assets/files/video_nasne.ogv', type='video/ogv')
+        .swiper-container.main-slider
+          .swiper-wrapper
+            .swiper-slide(style="background: url(assets/images/banner.jpg) no-repeat")
+            .swiper-slide(style="background: url(assets/images/banner.jpg) no-repeat")
+            .swiper-slide(style="background: url(assets/images/banner.jpg) no-repeat")
         .video-caption
           | See and understand your data  with MathDB<br>
           a(href="#").btn.waves-effect.waves-light See it in action
@@ -144,15 +149,16 @@ html
         .container
           .heading-section Hire
           .subheading Integrated Technologies Laboratory (Intela) University provides students the completely free opportunity to use cutting-edge platforms for all computing needs. Students can use the revolutionary MathDB data platform for Machine Learning to tackle real world problems – free of charge. 
-          .swiper-container.hire-slider
-            .swiper-wrapper
-              +hire-item('pic1','Science Team')
-              +hire-item('pic2','Data scientists')
-              +hire-item('pic3','Software engineers')
-              +hire-item('pic2','Software engineers')
-              +hire-item('pic1','Software engineers')
-          .swiper-button-next
-          .swiper-button-prev
+          .relative-container
+            .swiper-container.hire-slider
+              .swiper-wrapper
+                +hire-item('pic1','Science Team')
+                +hire-item('pic2','Data scientists')
+                +hire-item('pic3','Software engineers')
+                +hire-item('pic2','Software engineers')
+                +hire-item('pic1','Software engineers')
+            .swiper-button-next
+            .swiper-button-prev
       // section hire
       // section Events
       section.events-section.scrollspy(id="section5")

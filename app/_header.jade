@@ -16,7 +16,9 @@ header.header.clearfix
       .search-butt.js_open_search
         span.icon-ico01
       a.btn.waves-effect.waves-light.inlog.modal-trigger(href="#registration")
-        | Log in
+        | Sign up
+      a.btn.waves-effect.waves-light.inlog.modal-trigger(href="#login")
+        | Sign in
 
   .header-bottom
     .container
@@ -37,13 +39,33 @@ header.header.clearfix
                   a(href="#section4") Hire
                 li
                   a(href="#section5") Events
-        li
+        li.with-drop
           a(href='products.html') Products
-        li
+          .drop-menu.drop-menu--2
+            .drop-menu-arrow
+            .container
+              ul.section.table-of-contents
+                li
+                  a(href="#") MathDB Cloud
+                li
+                  a(href="#") MathDB Desktop  
+        li.with-drop
           a(href='service-one.html') Services
+          .drop-menu.drop-menu--3
+            .drop-menu-arrow
+            .container
+              ul.section.table-of-contents
+                li
+                  a(href="#") DSAAS - Data Science as a Service
+                li
+                  a(href="#") AIAAS - AI as a Service 
+                li
+                  a(href="#") MLAAS - Machine Learning as a Service 
+                li
+                  a(href="#") ICAAS - Intelligent Computing as a Service 
         li
           span Education
         li
           a(href='#') Hire 
         li
-          a(href='#') Company
+          a(href='company.html') Company

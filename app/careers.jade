@@ -84,24 +84,28 @@ html
                 ul.collapsible(data-collapsible='accordion')
                   li
                     .collapsible-header
-                      | Oracle DBA
+                      |Oracle DBA
                     .collapsible-body
                       p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                      a.add-theme-title(href="#!",data-theme="1").apply apply
                   li
                     .collapsible-header
-                      | Sybase DBA/Developer
+                      |Sybase DBA/Developer
                     .collapsible-body
                       p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                      a.add-theme-title(href="#!",data-theme="2").apply apply
                   li
                     .collapsible-header
-                      | Sybase Sr. Developer
+                      |Sybase Sr. Developer
                     .collapsible-body
                       p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                      a.add-theme-title(href="#!",data-theme="3").apply apply
                   li
                     .collapsible-header
-                      | MS SQL DBA
+                      |MS SQL DBA
                     .collapsible-body
                       p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                      a.add-theme-title(href="#!",data-theme="4").apply apply
               .contact-form
                 .heading-contact.align-left Interested in working with us? Submit your Resume here!
                 .row
@@ -117,12 +121,13 @@ html
                       input(type="email",required,data-validate="email")
                     .col.l6.m12.s12.form-field.required-field
                       span Subject*
-                      select(required)
-                        option(value="",disabled="",selected="") Select subject   
+                      select(required).js_select_theme
+                        option(value="",disabled="",selected="") Select theme   
          
-                        option(value="1") Select subject 1                
-                        option(value="1") Select subject 1                
-                        option(value="1") Select subject 1   
+                        option(value="Oracle DBA") Oracle DBA             
+                        option(value="Sybase DBA/Developer") Sybase DBA/Developer               
+                        option(value="Sybase Sr. Developer") Sybase Sr. Developer   
+                        option(value="MS SQL D") MS SQL DBA   
                     .col.s12.form-field.required-field
                       span Message*
                       textarea(required).materialize-textarea
@@ -133,6 +138,7 @@ html
                         span.icon-ico31
                         input(type="file")
                       span.file-name File is not selected
+                    .clearfix
                     button(type="submit").btn.waves-effect.waves-light submit       
       // page item
       .puship-bottom-block

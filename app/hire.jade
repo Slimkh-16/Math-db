@@ -1,0 +1,203 @@
+doctype html
+html
+  head
+    include _head
+
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body.noscroll
+    noscript
+      style.
+        .preloader {display:none !important;}
+      div
+        strong For full functionality of this site it is necessary to enable JavaScript. Download the update here 
+        a(href="http://enable-javascript.com")
+          | enable-javascript.com
+      
+    //if lte IE 8
+      p.off-js
+        | Ваш браузер устарел, пожалуйста 
+        b обновите
+        |  его.
+    // PRELOADER
+    include _preloader
+    // PRELOADER
+    // mobile menu
+    include _mobile-menu
+    // mobile menu
+    // wrapper start
+    .wrapper
+      // header SECTION
+      include _header
+      // header SECTION
+      //banner section
+      .banner(style="background:url(assets/images/banner.jpg) 50% 50% no-repeat")
+        .banner-caption
+          | We make breakthrough products that change
+          br
+          | the way people use data.
+      //banner section
+      // page item
+      section.page-item.contact-page
+        .container
+          .page-left-fixed-nav.checkbox-hire.js_check_block
+            .filter-title Filter
+            ul.js_sidebar-nav__filter.filter-list
+              li.side-head
+                input#filled-in-box.filled-in(data-select-value='1', type='checkbox')
+                label(for='filled-in-box') Science Team
+              li.side-head
+                input#filled-in-box-1.filled-in.js_check(data-select-value='2', type='checkbox')
+                label(for='filled-in-box-1') Data scientists
+              li.side-head
+                input#filled-in-box-2.filled-in(data-select-value='3', type='checkbox')
+                label(for='filled-in-box-2') Software engineers
+              li.side-head
+                input#filled-in-box-3.filled-in(data-select-value='4', type='checkbox')
+                label(for='filled-in-box-3') Business analysts
+              li.side-head
+                input#filled-in-box-4.filled-in(data-select-value='5', type='checkbox')
+                label(for='filled-in-box-4') IT Professionals
+            ul.section.table-of-contents.js_sidebar-nav__categories
+              li.collapse-nav
+                a(href='#!').js_collapse_nav Country
+                  span.collapse-butt.icon-ico22
+                ul.collapse-box.sidebar-nav
+                  li.sidebar-nav__item
+                    a.js_hire-item.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__country, 1') Ukraine
+                  li.sidebar-nav__item
+                    a.js_hire-item.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__country, 2') UK
+                  li.sidebar-nav__item
+                    a.js_hire-item.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__country, 3') USA
+              li.collapse-nav
+                a(href='#!').js_collapse_nav Language
+                  span.collapse-butt.icon-ico22
+                ul.collapse-box.sidebar-nav
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__language, 1') Language 1
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__language, 2') Language 2
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__language, 3') Language 3
+              li.collapse-nav
+                a(href='#!').js_collapse_nav Industry
+                  span.collapse-butt.icon-ico22
+                ul.collapse-box.sidebar-nav
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__industry, 1') Industry 1
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__industry, 2') Industry 2
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__industry, 3') Industry 3
+              li.collapse-nav
+                a(href='#!').js_collapse_nav Number of people
+                  span.collapse-butt.icon-ico22
+                ul.collapse-box.sidebar-nav
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__number, 2') people 1
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__number, 2') people 2
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__number, 3') people 3
+              li.collapse-nav
+                a(href='#!').js_collapse_nav Technical skills
+                  span.collapse-butt.icon-ico22
+                ul.collapse-box.sidebar-nav
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__technical, 1') Technical skills 1
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__technical, 2') Technical skills 2
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__technical, 3') Technical skills 3
+              li.collapse-nav
+                a(href='#!').js_collapse_nav Team individual
+                  span.collapse-butt.icon-ico22
+                ul.collapse-box.sidebar-nav
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__team, 1, 1') Team individual 1
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__team, 2') Team individual 2
+                  li.sidebar-nav__item
+                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__team, 3') Team individual 3
+
+          .row
+            .col.l9.offset-l3.s12
+              .heading-section.align-left.heading-section--red Hire
+              .contact-form
+                .heading-contact.align-left Contact form
+                .row
+                  form(action="#").js_validate.js_contact-form
+                    .col.l6.m12.s12.form-field.required-field
+                      span Name (first name, last name)*
+                      input(type="text",required)   
+                    .col.l6.m12.s12.form-field.required-field
+                      span Phone*
+                      input(type="tel",required,data-validate="phone")
+                    .col.l6.m12.s12.form-field.required-field
+                      span Email*
+                      input(type="email",required,data-validate="email")
+                    .col.l6.m12.s12.form-field
+                      span Team
+                      select.progr-select.my_select_box.chosen-select.js_check.js_contact-form__team-chosen(multiple='', data-placeholder='')
+                        option(value='1') Science Team
+                        option(value='2') Data science
+                        option(value='3') Software engineers
+                        option(value='4') Business analysts
+                        option(value='5') IT Professionals
+                    .col.l6.m12.s12.form-field
+                      span Country
+                      select.browser-default.progr-select.js_hire-select.js_contact-form__country.js_mater-select
+                        option(value='', disabled='', selected='')
+                          | Select in filters
+                        option(value='1') Ukraine
+                        option(value='2') UK
+                        option(value='3') USA
+                    .col.l6.m12.s12.form-field
+                      span Language
+                      select.browser-default.progr-select.js_contact-form__language.js_mater-select
+                        option(value='', disabled='', selected='')
+                          | Select in filters
+                        option(value='1') Language 1
+                        option(value='2') Language 2
+                        option(value='3') Language 3
+                    .col.l6.m12.s12.form-field
+                      span Industry
+                      select.browser-default.progr-select.js_contact-form__industry.js_mater-select
+                        option(value='', disabled='', selected='')
+                          | Select in filters
+                        option(value='1') Industry 1
+                        option(value='2') Industry 2
+                        option(value='3') Industry 3
+                    .col.l6.m12.s12.form-field
+                      span Number of people
+                      select.browser-default.progr-select.js_contact-form__number.js_mater-select
+                        option(value='', disabled='', selected='')
+                          | Select in filters
+                        option(value='1') People 1
+                        option(value='2') People 2
+                        option(value='3') People 3
+                    .col.l6.m12.s12.form-field
+                      span Technical skills
+                      select.browser-default.progr-select.js_contact-form__technical.js_mater-select
+                        option(value='', disabled='', selected='')
+                          | Select in filters
+                        option(value='1') Technical skills 1
+                        option(value='2') Technical skills 2
+                        option(value='3') Technical skills 3
+                    .col.l6.m12.s12.form-field
+                      span Team individual
+                      select.browser-default.progr-select.js_contact-form__team.js_mater-select
+                        option(value='', disabled='', selected='')
+                          | Select in filters
+                        option(value='1') Team individual 1
+                        option(value='2') Team individual 2
+                        option(value='3') Team individual 3
+                    .clearfix
+                    button(type="submit").btn.waves-effect.waves-light submit       
+      // page item
+      .puship-bottom-block
+      .above-footer
+    include _footer

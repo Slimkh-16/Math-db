@@ -72,6 +72,12 @@ html
                     a.js_hire-item.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__country, 2') UK
                   li.sidebar-nav__item
                     a.js_hire-item.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__country, 3') USA
+                  li.sidebar-nav__item
+                    a.js_hire-item.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__country, 1') Ukraine
+                  li.sidebar-nav__item
+                    a.js_hire-item.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__country, 2') UK
+                  li.sidebar-nav__item
+                    a.js_hire-item.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__country, 3') USA
               li.collapse-nav
                 a(href='#!').js_collapse_nav Language
                   span.collapse-butt.icon-ico22
@@ -82,26 +88,6 @@ html
                     a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__language, 2') Language 2
                   li.sidebar-nav__item
                     a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__language, 3') Language 3
-              li.collapse-nav
-                a(href='#!').js_collapse_nav Industry
-                  span.collapse-butt.icon-ico22
-                ul.collapse-box.sidebar-nav
-                  li.sidebar-nav__item
-                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__industry, 1') Industry 1
-                  li.sidebar-nav__item
-                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__industry, 2') Industry 2
-                  li.sidebar-nav__item
-                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__industry, 3') Industry 3
-              li.collapse-nav
-                a(href='#!').js_collapse_nav Number of people
-                  span.collapse-butt.icon-ico22
-                ul.collapse-box.sidebar-nav
-                  li.sidebar-nav__item
-                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__number, 2') people 1
-                  li.sidebar-nav__item
-                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__number, 2') people 2
-                  li.sidebar-nav__item
-                    a.js_sidebar-nav__item(href='#', data-contact-form='js_contact-form__number, 3') people 3
               li.collapse-nav
                 a(href='#!').js_collapse_nav Technical skills
                   span.collapse-butt.icon-ico22
@@ -165,20 +151,10 @@ html
                         option(value='3') Language 3
                     .col.l6.m12.s12.form-field
                       span Industry
-                      select.browser-default.progr-select.js_contact-form__industry.js_mater-select
-                        option(value='', disabled='', selected='')
-                          | Select in filters
-                        option(value='1') Industry 1
-                        option(value='2') Industry 2
-                        option(value='3') Industry 3
+                      input(type="text",required)
                     .col.l6.m12.s12.form-field
                       span Number of people
-                      select.browser-default.progr-select.js_contact-form__number.js_mater-select
-                        option(value='', disabled='', selected='')
-                          | Select in filters
-                        option(value='1') People 1
-                        option(value='2') People 2
-                        option(value='3') People 3
+                      input(type="text",required)
                     .col.l6.m12.s12.form-field
                       span Technical skills
                       select.browser-default.progr-select.js_contact-form__technical.js_mater-select

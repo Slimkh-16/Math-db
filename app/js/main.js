@@ -1,3 +1,16 @@
+var _events = '';
+
+/*================================alert==========================*/
+function alert(title, mess) {
+    // $('#modal-thank').modal('close');
+    $('#modal-thank .modal-head').html(title);
+    $('#modal-thank .modal-body p').html(mess);
+    setTimeout(function(){
+      $('#modal-thank').modal('open');
+    }, 300);
+}
+/*================================end-alert==========================*/
+
 var isMobile = false,
     scrollTopPosition;
 function getBrowser() {
@@ -73,10 +86,25 @@ function getBrowser() {
 var browserYou = getBrowser();
 if (browserYou.platform == 'mobile') { isMobile = true;document.documentElement.classList.add('mobile')}else {document.documentElement.classList.add('desktop')}
 if ((browserYou.browser == 'ie')) {document.documentElement.classList.add('ie');}
+if ((browserYou.browser == 'firefox')) {document.documentElement.classList.add('firefox');}
 if ((browserYou.browser == 'ie' &&  browserYou.versionShort < +'9') || ((browserYou.browser == 'opera' || browserYou.browser == 'operaWebkit') && browserYou.versionShort < +'18') || (browserYou.browser == 'firefox' &&  browserYou.versionShort < +'30')) {
     alert('Обновите браузер','')
 };
+var locationHash = window.location.hash.replace('#','');
+window.location.hash = '';
 window.onload = function() {
+  if(document.querySelector('.main-page') != undefined) {
+    if(locationHash.length > 3){
+      scrollTo(document.body, document.getElementById(locationHash).offsetTop - 55, 500);
+    }
+  } else {
+    if(locationHash.length > 3){
+      scrollTo(document.body, document.getElementById(locationHash).offsetTop + document.querySelector('.parent-scroll-element').offsetTop - 55, 500);
+    }
+  }
+  // if(locationHash.length > 3){
+  //   scrollTo(document.body, document.getElementById(locationHash).offsetTop + document.querySelector('.parent-scroll-element').offsetTop - 55, 500);
+  // }
   // PRELOADER
   var body = document.querySelector('body');
   body.classList.add('loading')
@@ -89,7 +117,9 @@ window.onload = function() {
       autoplay: 2000,
       speed: 1500,
       parallax:true,
-      slidesPerView: 1
+      slidesPerView: 1,
+      pagination: '.swiper-pagination',
+              paginationClickable: true,
   });
   var swiper = new Swiper('.hire-slider', {
       loop:false,
@@ -123,32 +153,37 @@ window.onload = function() {
           }
         }
   });
-  var swiper2 = new Swiper('.news-slider', {
-      loop:false,
-      nextButton: '.news-section .swiper-button-next',
-      prevButton: '.news-section .swiper-button-prev',
-      parallax:true,
-      spaceBetween: 30,
-      slidesPerView: 2,
-      breakpoints: {
-          600: {
-            slidesPerView: 1,
-            spaceBetween: 0
-          },
-          767: {
-            slidesPerView: 2,
-            spaceBetween: 20
-          },
-          1023: {
-            slidesPerView: 2,
-            spaceBetween: 30
-          },
-          1200: {
-            slidesPerView: 2,
-            spaceBetween: 30
-          }
-        }
-  });
+  if($('.news-slider').length) {
+    $('.news-slider').each(function(i,this_item){
+      var swiper2 = new Swiper($(this_item), {
+          loop:false,
+          nextButton: $(this_item).parents('.news-section').find('.swiper-button-next'),
+          prevButton: $(this_item).parents('.news-section').find(' .swiper-button-prev'),
+          parallax:true,
+          spaceBetween: 30,
+          slidesPerView: 2,
+          breakpoints: {
+              600: {
+                slidesPerView: 1,
+                spaceBetween: 0
+              },
+              767: {
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+              1023: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+              1200: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              }
+            }
+      });
+    });
+  }
+  
   // mobile menu
   document.querySelector('.js_open_mob_menu').addEventListener('click',function(){
     document.querySelector('.mobile-menu').style.display = 'block';
@@ -165,20 +200,33 @@ window.onload = function() {
     },1000);
     setTimeout(function(){document.querySelector('.mobile-menu').style.display = 'none'},1500);
   });
-  document.querySelector('.mobile-menu-drop').addEventListener('click',function(e){
-    if(e.target.className == 'scroll-to') {
-      document.querySelector('.mobile-menu').classList.remove('vis-li')
-      setTimeout(function(){
-          document.querySelector('.mobile-menu').classList.remove('visible');
-          document.body.classList.remove('noscroll');
-          document.body.style.paddingRight = 0;
-      },1000);
-      setTimeout(function(){
-        document.querySelector('.mobile-menu').style.display = 'none';
-        document.querySelector('.open-drop-menu').classList.remove('active');
-        document.querySelector('.mobile-menu .mobile-menu-drop').style.display = 'none';
-      },1500);
-    }
+  // document.querySelector('.mobile-menu-drop').addEventListener('click',function(e){
+  //   if(e.target.tagName == 'A') {
+  //     document.querySelector('.mobile-menu').classList.remove('vis-li')
+  //     setTimeout(function(){
+  //         document.querySelector('.mobile-menu').classList.remove('visible');
+  //         document.body.classList.remove('noscroll');
+  //         document.body.style.paddingRight = 0;
+  //     },1000);
+  //     setTimeout(function(){
+  //       document.querySelector('.mobile-menu').style.display = 'none';
+  //       document.querySelector('.open-drop-menu').classList.remove('active');
+  //       document.querySelector('.mobile-menu .mobile-menu-drop').style.display = 'none';
+  //     },1500);
+  //   }
+  // });
+  $('.mobile-menu-drop a').on('click',function(){
+    $('.mobile-menu').removeClass('vis-li');
+    setTimeout(function(){
+        $('.mobile-menu').removeClass('visible');
+        $('body').removeClass('noscroll');
+        document.body.style.paddingRight = 0;
+    },1000);
+    setTimeout(function(){
+      document.querySelector('.mobile-menu').style.display = 'none';
+      $('.open-drop-menu').removeClass('active');
+      document.querySelector('.mobile-menu .mobile-menu-drop').style.display = 'none';
+    },1500);
   });
   // mobile menu
   // search
@@ -214,13 +262,9 @@ window.onload = function() {
   // file
   if(document.querySelector('input[type="file"]') != undefined) {
     document.querySelector('input[type="file"]').addEventListener('change',function(){
-      // var files = document.getElementById('file');
-      //         for (var i = 0; i < files.files.length; i++) {
-      //             $('.name-file').text(files.files[i].name);
-      //         }
-      var file = this.files[0].name;
-      console.log(this.files[0].name)
-      this.parentNode.nextElementSibling.innerText = file;
+      var file = this.value.split(/\\/),
+          fileLength = file.length;
+      this.parentNode.nextElementSibling.innerText = file[fileLength - 1];
     });
   };
   // if(document.querySelector('.drop-menu-arrow') != undefined) {
@@ -315,6 +359,8 @@ $(window).resize(function(){
   // puship sidebar
   if(document.querySelector('.page-left-fixed-nav') != undefined){
     pushipElement();
+    var posLeft = $('.page-item>.container').offset().left + 15;
+    $('.page-left-fixed-nav').css('left',posLeft);
   }
   // puship sideba
 });
@@ -322,10 +368,21 @@ $(window).load(function(){
   // puship sidebar
   if(document.querySelector('.page-left-fixed-nav') != undefined){
     pushipElement();
+    var posLeft = $('.page-item>.container').offset().left + 15;
+    $('.page-left-fixed-nav').css('left',posLeft);
   }
   // puship sidebar
 });
 $(document).ready(function() {
+
+    $("[data-active]").each(function(){
+      _val = $(this).val();
+      if(_val != '') {
+        $(this).find("option").removeAttr("selected");
+        $(this).find("option[value="+_val+"]").attr("selected", "selected");
+      }
+    });
+
   // filter box
   var _selectorInvestItem = '.js_invests-item';
       $(_selectorInvestItem).on('click', function (e) {
@@ -403,9 +460,10 @@ $(document).ready(function() {
     var themeTitle = $(this).attr('data-theme');
     $('.js_select_theme option').removeAttr('selected')
     $('.js_select_theme').material_select('destroy');
-    console.log($('.js_select_theme option:eq('+ themeTitle+')'))
-    $('.js_select_theme option:eq('+ themeTitle+')').attr('selected','selected')
+    $('.js_select_theme option[data-id='+ themeTitle+']').attr('selected','selected')
     $('.js_select_theme').material_select();
+    $('body,html').animate({scrollTop: $('.contact-form').offset().top - 50},500);
+    return false;
   });
   // menu drop
   $('.head-nav li.with-drop').hover(
@@ -428,18 +486,30 @@ $(document).ready(function() {
   // menu drop
   // collapse
   $(document).on('click','.collapse-nav .js_collapse_nav',function(){
+    var heightCollapseElement;
     if($(this).hasClass('active')) {
       $(this).removeClass('active');
       $(this).parent().removeClass('active');
-      $(this).parent().find('.collapse-box').slideUp(500);
+      $(this).parent().find('.collapse-box').slideUp(500,function(){
+        heightCollapseElement = 0;
+        $('.page-left-fixed-nav').animate({'marginTop': -heightCollapseElement},300);
+      });
+      
     }else {
       $('.collapse-box').slideUp(500)
+      $('.js_collapse_nav').removeClass('active');
       $('.collapse-nav .collapse-butt').removeClass('active');
       $('.collapse-nav').removeClass('active');
       $(this).addClass('active');
       $(this).parent().addClass('active');
-      $(this).parent().find('.collapse-box').slideDown(500);
+      $(this).parent().find('.collapse-box').slideDown(500,function(){
+        heightCollapseElement = $(this).parent().find('.collapse-box').height();
+        if($('.page-left-fixed-nav').hasClass('pinned') || $('.page-left-fixed-nav').hasClass('pin-bottom')) {
+          $('.page-left-fixed-nav').animate({'marginTop': -heightCollapseElement},300);
+        }
+      });
     }
+    
     return false;
   });
   // collapse
@@ -463,7 +533,7 @@ $(document).ready(function() {
       fullText:false
   });
   $('.service-txt').liTextLength({
-      length: 30,        
+      length: 35,        
       afterLength: '...',         
       fullText:false
   });
@@ -501,92 +571,62 @@ $(document).ready(function() {
       fullText:false
   });
   // calendar
-  $('#calendar').fullCalendar({
-    header: {
-      left: 'prev,next',
-      center: 'title',
-      right: 'month,listYear'
-    },
-    defaultDate: '2016-12-12',
-    navLinks: true, // can click day/week names to navigate views
-    editable: true,
-    displayEventTime: false,
-    eventLimit: true, // allow "more" link when too many events
-    events: [
-      {
-        title: 'Tableau Conference,2016',
-        start: '2016-12-15',
-        img: 'assets/images/ev1.jpg',
-        time: '3:00 pm - 5:00 pm PST'
+  if(_events != undefined) {
+    var initialLangCode = 'en';
+    if($('[lang="ua"]').size() > 0) {
+      initialLangCode = 'uk';
+    }
+    if($('[lang="ru"]').size() > 0) {
+      initialLangCode = 'ru';
+    }
+    $('#calendar').fullCalendar({
+      'locale': initialLangCode,
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'month,listYear'
       },
-      {
-        title: 'MathDB Conference,2016',
-        start: '2016-12-22',
-        img: 'assets/images/ev2.jpg',
-        time: '12:00 pm - 5:00 pm PST'
-      },
-      {
-        title: 'Conference1, 2016',
-        start: '2016-12-22',
-        img: 'assets/images/ev1.jpg',
-        time: '18:00 pm - 5:00 pm PST'
-      },
-      {
-        title: 'Conference2, 2016',
-        start: '2016-12-22',
-        img: 'assets/images/ev2.jpg',
-        time: '8:00 pm - 5:00 pm PST'
-      },
-      {
-        title: 'Conference3, 2016',
-        start: '2016-12-22',
-        img: 'assets/images/ev2.jpg',
-        time: '3:00 pm - 5:00 pm PST'
-      },
-      {
-        title: 'Conference4, 2016',
-        img: 'assets/images/about4.jpg',
-        start: '2016-12-22',
-        time: '3:00 pm - 5:00 pm PST'
-      },
-      {
-        title: 'NEW YEAR',
-        img: 'assets/images/about3.jpg',
-        start: '2016-12-31',
-        time: '3:00 pm - 5:00 pm PST'
-      }
-    ],
-    eventClick: function(event) {
-      var eventImg = event.img,
-          eventTime = event.time,
-          eventTitle = event.title,
-          eDate = event.start,
-          eventDate = eDate._d.toString().split(' ');
-      document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
-      document.body.classList.add('noscroll');
-      document.querySelector('.calendar-event').classList.add('visible');
-      document.querySelector('.overlay').style.display = "block";
-      setTimeout(function(){
-        document.querySelector('.overlay').classList.add('visible');
-      },100);
-      document.querySelector('.calendar-item__img img').setAttribute('src',eventImg);
-      document.querySelector('.calendar-item__info b').innerHTML = eventTitle;
-      document.querySelector('.calendar-item__time').innerHTML = eventTime;
-      document.querySelector('.calendar-title').innerHTML = eventDate[1] + ' , ' + eventDate[2] + ' , ' + eventDate[3];
-    },
-  });
-  // calendar
-  if(document.querySelector('.calendar-event') != undefined) {
-    for (var i = 0; i < document.querySelectorAll('.js_close_calendar').length; i++) {
-      document.querySelectorAll('.js_close_calendar')[i].addEventListener('click',function(){
-        document.body.classList.remove('noscroll');
-        document.body.style.paddingRight = 0;
-        document.querySelector('.calendar-event').classList.remove('visible');
-        document.querySelector('.overlay').classList.remove('visible');
+      defaultDate: '2016-12-12',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      displayEventTime: false,
+      eventLimit: true, // allow "more" link when too many events
+      events: _events,
+      eventClick: function(event) {
+        console.log(event);
+        var eventImg = event.img,
+            eventTime = event.time,
+            eventTitle = event.title,
+            eDate = event.start,
+            eventLink = event.link,
+            eventDate = eDate._d.toString().split(' ');
+        document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
+        document.body.classList.add('noscroll');
+        document.querySelector('.calendar-event').classList.add('visible');
+        document.querySelector('.overlay').style.display = "block";
         setTimeout(function(){
-          document.querySelector('.overlay').style.display = "block";
-        },600);
-      });
+          document.querySelector('.overlay').classList.add('visible');
+        },100);
+        document.querySelector('.calendar-item__img img').setAttribute('src',eventImg);
+        document.querySelector('.calendar-item__info b').innerHTML = eventTitle;
+        document.querySelector('.calendar-item__time').innerHTML = eventTime;
+        document.querySelector('.calendar-body a').setAttribute('href', eventLink);
+        document.querySelector('.calendar-title').innerHTML = eventDate[1] + ' , ' + eventDate[2] + ' , ' + eventDate[3];
+      },
+    });
+    // calendar
+    if(document.querySelector('.calendar-event') != undefined) {
+      for (var i = 0; i < document.querySelectorAll('.js_close_calendar').length; i++) {
+        document.querySelectorAll('.js_close_calendar')[i].addEventListener('click',function(){
+          document.body.classList.remove('noscroll');
+          document.body.style.paddingRight = 0;
+          document.querySelector('.calendar-event').classList.remove('visible');
+          document.querySelector('.overlay').classList.remove('visible');
+          setTimeout(function(){
+            document.querySelector('.overlay').style.display = "block";
+          },600);
+        });
+      }
     }
   }
 });
@@ -900,3 +940,4 @@ jQuery.fn.liTextLength = function(options){
       };
   });
 };
+
